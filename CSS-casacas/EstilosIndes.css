@@ -222,6 +222,18 @@
   }
 }
 
+.card-img-overlay {
+  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
+  text-align: center;
+}
 
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
 
+.btn-light {
+  font-size: 16px;
+  padding: 10px 20px;
+}
 
