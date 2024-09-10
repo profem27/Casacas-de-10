@@ -94,6 +94,7 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajusta el mínimo a 250px */
   gap: 30px; /* Aumenta el espacio entre productos */
   padding: 30px;
+  margin-bottom: -2rem;
 }
 
 .product-card {
@@ -222,12 +223,31 @@
   }
 }
 
-.card-img-overlay {
-  background: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
-  text-align: center;
+.position-relative {
+  position: relative;
 }
 
-.card-title {
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.position-relative:hover .overlay {
+  opacity: 1;
+}
+
+h5 {
   font-size: 24px;
   font-weight: bold;
 }
@@ -236,4 +256,187 @@
   font-size: 16px;
   padding: 10px 20px;
 }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px; /* Espacio entre las imágenes */
+  margin-left: -3.75em; /* Centramos la grid */
+  max-width: fit-content; /* Ajusta el ancho al contenido */
+  margin-bottom: -10rem;
+}
+
+.item-left {
+  grid-row: span 2; /* La imagen de la izquierda ocupará dos filas */
+  width: 39.6rem;
+}
+
+.item-right-top,
+.item-right-bottom {
+  width: 35rem;
+}
+
+.position-relative img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media query para pantallas de menos de 768px de ancho */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    margin-left: 0; /* Ajustamos el margen */
+    max-width: 100%; /* Aseguramos que el ancho máximo sea el 100% */
+  }
+
+  .item-left {
+    grid-row: auto; /* La imagen de la izquierda ocupará solo una fila */
+    width: 100%; /* Ajustamos el ancho al 100% del contenedor */
+  }
+
+  .item-right-top{
+    width: 100%; /* Ajustamos el ancho al 100% del contenedor */
+  }
+  .item-right-bottom {
+    width: 100%;
+    padding-bottom: 12em; /* Ajustamos el ancho al 100% del contenedor */
+  }
+}
+
+/* Media query para pantallas de menos de 480px de ancho */
+@media (max-width: 480px) {
+  .grid-container {
+    gap: 5px; /* Reducimos el espacio entre imágenes */
+  }
+}
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 40px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  flex: 1;
+  margin: 10px;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.3em;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.footer-column a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  filter: invert(1); /* Makes icons white */
+}
+
+.footer-column a img:hover {
+  opacity: 0.8;
+}
+
+.footer-payment-shipping {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  border-top: 1px solid #333;
+}
+
+.payment-methods, .shipping-methods {
+  display: flex;
+  align-items: center;
+}
+
+.payment-methods h3, .shipping-methods h3 {
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+.payment-methods img, .shipping-methods img {
+  height: 30px;
+  margin-right: 15px;
+}
+
+.footer-bottom {
+  text-align: center;
+  background-color: #111;
+  padding: 20px 40px;
+  border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+  margin bottom: 0;
+  font-size: 0.9em;
+  color: #bbb;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: #f0f0f0;
+}
+
+.social-link {
+  display: flex;
+  align-items: center; /* Alinea verticalmente ícono y texto */
+}
+
+.social-link svg {
+  margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.instagram-link {
+  color: #ffffff; /* Texto blanco */
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+.instagram-link:hover {
+  color: #ccc; /* Efecto hover para el texto */
+}
+
 
