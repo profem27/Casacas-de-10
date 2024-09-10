@@ -172,6 +172,12 @@ a {
 }
 
 /*=============== DROPDOWN ===============*/
+/* Estilos para el dropdown4 (carrito) */
+.dropdown4 {
+  position: fixed; /* Fija el elemento en la pantalla */
+  top: -15px; /* Ajusta la posición superior */
+  right: -100px; /* Ajusta la posición a la derecha */
+}
 .dropdown__button {
   cursor: pointer;
 }
