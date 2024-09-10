@@ -6,7 +6,7 @@
         }
         
         .product {
-            border: 1px solid #ccc;
+            border: 1px solid #1aff00;
             padding: 10px;
             text-align: center;
             width: 200px;
@@ -15,7 +15,7 @@
         button {
             padding: 5px 10px;
             background-color: #28a745;
-            color: white;
+            color: rgb(0, 255, 21);
             border: none;
             cursor: pointer;
         }
