@@ -97,3 +97,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
+  (function(){
+ 
+  $("#cart").on("click", function() {
+    $(".shopping-cart").fadeToggle( "fast");
+  });
+  
+})();
+
