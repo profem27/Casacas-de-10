@@ -324,6 +324,7 @@ a {
   }
   .dropdown__item {
     cursor: pointer;
+    margin-right: 5px;
   }
   .dropdown__item:hover .dropdown__arrow {
     transform: rotate(180deg);
