@@ -24,7 +24,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const productQuantity = parseInt(document.getElementById('quantity')?.value, 10) || 1;
 
         let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        cart.push({ name: productName, price: productPrice, size: productSize, quantity: productQuantity });
+
+        // Verificar si el producto ya está en el carrito
+        const existingItemIndex = cart.findIndex(item => item.name === productName && item.size === productSize);
+        if (existingItemIndex > -1) {
+            // Si el producto ya está en el carrito, actualizar la cantidad
+            cart[existingItemIndex].quantity += productQuantity;
+        } else {
+            // Si el producto no está en el carrito, agregarlo
+            cart.push({ name: productName, price: productPrice, size: productSize, quantity: productQuantity });
+        }
+
         localStorage.setItem('cart', JSON.stringify(cart));
         updateCartDisplay();
         alert(`${productName} (${productSize}) - ${productQuantity} unidades han sido agregadas al carrito.`);
@@ -77,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
             message += `\nTotal a pagar: $${cart.reduce((acc, item) => acc + (item.price * item.quantity), 0).toLocaleString()}`;
             
             const encodedMessage = encodeURIComponent(message);
-            const whatsappUrl = `https://wa.me/+5491124559650?text=${encodedMessage}`; // Reemplaza 1234567890 con tu número de WhatsApp
+            const whatsappUrl = `https://wa.me/+5491124559650?text=${encodedMessage}`; // Reemplaza +5491124559650 con tu número de WhatsApp
 
             window.location.href = whatsappUrl;
         });
