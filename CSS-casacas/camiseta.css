@@ -48,6 +48,19 @@
 
 /* Estilos para pantallas pequeñas (móviles) */
 @media only screen and (max-width: 768px) {
+
+    /* Estilos responsive */
+@media (max-width: 768px) {
+    .cart-popup {
+        position: absolute; /* Asegura que el carrito flotante esté posicionado en relación a su contenedor */
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: none; /* Permite que el carrito ocupe todo el ancho disponible */
+        display: none; /* Oculta el carrito por defecto, se mostrará cuando se haga clic en el botón */
+    }
+}
+
     .containerCamis {
         flex-direction: column; /* Cambiar a una columna en móviles */
         align-items: center;
