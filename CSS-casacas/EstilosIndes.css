@@ -283,6 +283,10 @@ h5 {
   object-fit: cover;
 }
 
+.main-content {
+  margin-top: 100px; /* Ajusta el valor según el tamaño de tu header */
+}
+
 /* Media query para pantallas de menos de 768px de ancho */
 @media (max-width: 768px) {
   .grid-container {

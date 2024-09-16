@@ -1,0 +1,37 @@
+/* Estilo para el select */
+#sort {
+    appearance: none; /* Eliminar el estilo por defecto */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #ef173e; /* Cambiar el color del recuadro */
+    color: #000; /* Color del texto negro */
+    border: 2px solid #ef173e; /* Borde con el mismo color del fondo */
+    padding: 10px 15px; /* Espaciado interior */
+    padding-left: 25px; /* Mayor margen a la izquierda para el texto */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    width: 200px; /* Ancho del select */
+    cursor: pointer; /* Cambiar el cursor a puntero */
+    transition: border-color 0.3s ease-in-out; /* Efecto en hover */
+}
+
+/* Cambios en hover (cuando el usuario pasa el ratón por encima) */
+#sort:hover {
+    border-color: #d91634; /* Cambiar el color del borde en hover */
+}
+
+/* Cambios cuando está enfocado (seleccionado) */
+#sort:focus {
+    outline: none; /* Eliminar el borde de enfoque por defecto */
+    border-color: #c4122f; /* Cambiar el color del borde en enfoque */
+}
+
+/* Estilo para las opciones del select */
+#sort option {
+    background-color: #fff; /* Color de fondo blanco */
+    color: #000; /* Color del texto negro */
+    padding: 10px; /* Espaciado interior */
+    font-size: 16px; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+}
