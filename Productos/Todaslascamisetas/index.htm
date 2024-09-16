@@ -14,7 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="../../CSS-casacas/styles.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/5118f03621.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/5118f03621.js" crossorigin="anonymous"></script> <script src="../../js/filtro.js"></script>
     <body>
 
 	<!-- Header -->
@@ -144,9 +144,21 @@
             
           </div>    
     </div>
+    
+    <section class="sort-section"></section>
+        <label for="sort">Ordenar por:</label>
+        <select id="sort" onchange="sortProducts()">
+            <option value="default">Seleccionar</option>
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+            <option value="retro">Retro</option>
+            <option value="actuales">Actuales</option>
+        </select>
+    </section>
     <section class="product-section">
         <h2 class="section-title">Todas Las Camisetas</h2>
     <div class="product-grid">
+        
         <div class="product-card">
             <a href="product1.html">
                 <div class="product-image">
