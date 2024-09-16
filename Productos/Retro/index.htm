@@ -4,9 +4,9 @@
     lang="es-ES"
     prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <head>
-        <meta http-equiv="X-UA-Compatible" ..content="IE=edge">
-        <meta http-equiv="../../content-Type" ..content="text/html; charset=utf-8">
-        <meta name="viewport" ..content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Casacas de 10</title>
         <link href="../../CSS-casacas/EstilosIndes.css" rel="stylesheet" type="text/css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -14,11 +14,10 @@
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
         <link rel="stylesheet" href="../../CSS-casacas/styles.css">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/5118f03621.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/5118f03621.js" crossorigin="anonymous"></script> <script src="../../js/filtro.js"></script>
     <body>
-        
 
-	<!-- Header --> 
+	<!-- Header -->
 	<header class="header">
     <nav class="nav container">
         <div class="nav__data">
@@ -105,7 +104,7 @@
                     </div>
 
                     <div class="dropdown__container">
-                        <div class="dropdown__../../content">
+                        <div class="dropdown__content">
                             <div class="dropdown__group">
                                 <div class="dropdown__icon">
                                     <i class="fa-solid fa-people-group fa-2xl" style="color: #ef173e;"></i>
@@ -145,35 +144,43 @@
             
           </div>    
     </div>
+    
+    <section class="sort-section"></section>
+        <label for="sort">Ordenar por:</label>
+        <select id="sort" onchange="sortProducts()">
+            <option value="default">Seleccionar</option>
+            <option value="az">A-Z</option>
+            <option value="za">Z-A</option>
+            <option value="retro">Retro</option>
+            <option value="actuales">Actuales</option>
+        </select>
+    </section>
     <section class="product-section">
         <h2 class="section-title">Retro</h2>
     <div class="product-grid">
+        
         <div class="product-card">
-            <a href="product1.html">
+            <a href="../../camisetas/Retro/afa94S.html">
                 <div class="product-image">
                     <img class="img-front" src="../../content/uploads/camiseta1-front.png" alt="Camiseta retro AFA Suplente Messi (10) 1994">
                     <img class="img-back" src="../../content/uploads/camiseta1-back.png" alt="Camiseta retro AFA Suplente Messi (10) 1994 Back">
-                    
                 </div>
                 <div class="product-info">
                     <h3>Camiseta retro AFA Suplente Messi (10) 1994</h3>
                     <p>$50.000</p>
-                    <button href = "/Carrito/index.htm" onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>
     
         <div class="product-card">
-            <a href="product2.html">
+            <a href="../../camisetas/Retro/man-un.html">
                 <div class="product-image">
                     <img class="img-front" src="../../content/uploads/camiseta2-front.png" alt="Camiseta retro Manchester United 03/04">
                     <img class="img-back" src="../../content/uploads/camiseta2-back.png" alt="Camiseta retro Manchester United 03/04 Back">
-                    
                 </div>
                 <div class="product-info">
                     <h3>Camiseta retro Manchester United 03/04</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>
@@ -182,12 +189,10 @@
                 <div class="product-image">
                     <img class="img-front" src="../../content/uploads/camiseta3-front.png" alt="Camiseta retro Parmalat 99/00">
                     <img class="img-back" src="../../content/uploads/camiseta3-back.png" alt="Camiseta retro Parmalat 99/00 Back">
-                    
                 </div>
                 <div class="product-info">
                     <h3>Camiseta retro Parmalat 99/00</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>
@@ -201,7 +206,6 @@
                 <div class="product-info">
                     <h3>Camiseta retro Brasil Ronaldo (9) 1998</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>  <div class="product-card">
@@ -213,7 +217,6 @@
                 <div class="product-info">
                     <h3>Camiseta retro Japón 1998</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>
@@ -227,7 +230,6 @@
                 <div class="product-info">
                     <h3>Camiseta retro Barcelona 08/09</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>  <div class="product-card">
@@ -239,11 +241,12 @@
                 <div class="product-info">
                     <h3>Camiseta retro Fiorentina 98/99</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>
-        <div class="product-card">
+    
+        
+          <div class="product-card">
             <a href="product9.html">
                 <div class="product-image">
                     <img class="img-front" src="../../content/uploads/camiseta9-front.png" alt="Camiseta retro Boca Juniors 02/03">
@@ -252,7 +255,6 @@
                 <div class="product-info">
                     <h3>Camiseta retro Boca Juniors 02/03</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>
@@ -266,43 +268,10 @@
                 <div class="product-info">
                     <h3>Camiseta retro River Plate 96/97</h3>
                     <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
-                </div>
-            </a>
-        </div>
-        
-        <div class="product-card">
-            <a href="product10.html">
-                <div class="product-image">
-                    <img class="img-front" src="../../content/uploads/camiseta10-front.png" alt="Camiseta retro River Plate 96/97">
-                    <img class="img-back" src="../../content/uploads/camiseta10-back.png" alt="Camiseta retro River Plate 96/97 Back">
-                </div>
-                <div class="product-info">
-                    <h3>Camiseta retro River Plate 96/97</h3>
-                    <p>$50.000</p>
-                    <button onclick="addToCart('Producto 1', 10)">Agregar al carrito</button>
                 </div>
             </a>
         </div>
     </div>
-        </div>  
-
-    <a href="cart.html">Ir al carrito</a>
-        <script>
-            // Función para agregar productos al carrito
-            function addToCart(name, price) {
-                // Obtener el carrito actual desde el localStorage
-                let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    
-                // Agregar nuevo producto al carrito
-                cart.push({ name: name, price: price });
-    
-                // Guardar carrito actualizado en localStorage
-                localStorage.setItem('cart', JSON.stringify(cart));
-    
-                alert(`${name} ha sido agregado al carrito.`);
-            }
-        </script>
     </section>
             <div>
                 <section class="buttons">
