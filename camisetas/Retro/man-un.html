@@ -131,25 +131,26 @@
                                                  </div>
                     </div>
                 </li>
-                        <div class="nav__cart">
-                            <a href="#" id="cart-icon" class="nav__link">
-                                🛒 Carrito (<span id="cart-count">0</span>)
-                            </a>
-                        </div>
-                </a>
+                <li><div class="nav__cart dropdown__item ">
+                    <a href="#" id="cart-icon" class="nav__link">
+                        🛒 Carrito (<span id="cart-count">0</span>)
+                    </a>
+                </div></li>  
             </ul>
         </div>
     </nav>
 </header>
-                <!-- Carrito flotante -->
-                <div id="cart-popup" class="cart-popup">
-                    <h2>Carrito de Compras</h2>
-                    <div id="cart-items"></div>
-                    <div class="cart-total">
-                        <p>Total: $<span id="cart-total">0</span></p>
-                    </div>
-                    <button onclick="../../Carrito/cart.html">Ir al carrito</button>
-                </div>
+
+<!-- Carrito flotante -->
+<div id="cart-popup" class="cart-popup">
+    <h2>Carrito de Compras</h2>
+    <div id="cart-items"></div>
+    <div class="cart-total">
+        <p>Total: <span id="cart-total">0</span></p>
+    </div>
+    <button id="checkout-button">Finalizar pedido</button>
+</div>
+
 <script src="../../js/main.js"></script>
 <div class="containerCamis">
     <!-- Galería de imágenes -->
