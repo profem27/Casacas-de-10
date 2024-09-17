@@ -1,37 +1,40 @@
-/* Estilo para el select */
-#sort {
-    appearance: none; /* Eliminar el estilo por defecto */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #ef173e; /* Cambiar el color del recuadro */
-    color: #000; /* Color del texto negro */
-    border: 2px solid #ef173e; /* Borde con el mismo color del fondo */
-    padding: 10px 15px; /* Espaciado interior */
-    padding-left: 25px; /* Mayor margen a la izquierda para el texto */
-    border-radius: 5px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
-    width: 200px; /* Ancho del select */
-    cursor: pointer; /* Cambiar el cursor a puntero */
-    transition: border-color 0.3s ease-in-out; /* Efecto en hover */
+/* Estilos generales para la sección del filtro */
+.product-section {
+    padding: 1em;
 }
 
-/* Cambios en hover (cuando el usuario pasa el ratón por encima) */
-#sort:hover {
-    border-color: #d91634; /* Cambiar el color del borde en hover */
+.sort-section {
+    display: flex;
+    align-items: center;
+    gap: 1em; /* Espacio entre los elementos */
+    border: 2px solid #ef173e; /* Color del recuadro */
+    border-radius: 8px;
+    padding: 0.5em; /* Espacio interno dentro del recuadro */
+    background-color: #fff; /* Fondo blanco para contraste */
+    width: fit-content; /* Ajusta el tamaño del recuadro al contenido */
+    margin: 0 auto; /* Centra el recuadro horizontalmente */
 }
 
-/* Cambios cuando está enfocado (seleccionado) */
-#sort:focus {
-    outline: none; /* Eliminar el borde de enfoque por defecto */
-    border-color: #c4122f; /* Cambiar el color del borde en enfoque */
+.sort-section label {
+    font-weight: bold;
+    color: #333; /* Tipografía oscura */
 }
 
-/* Estilo para las opciones del select */
-#sort option {
-    background-color: #fff; /* Color de fondo blanco */
-    color: #000; /* Color del texto negro */
-    padding: 10px; /* Espaciado interior */
-    font-size: 16px; /* Tamaño del texto */
-    font-weight: bold; /* Texto en negrita */
+.sort-section div {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.sort-section input[type="checkbox"] {
+    accent-color: #ef173e; /* Color del checkbox */
+}
+
+.sort-section input[type="checkbox"] + label {
+    font-size: 0.9em;
+    color: #333; /* Tipografía oscura */
+}
+
+.sort-section input[type="checkbox"]:checked + label {
+    font-weight: bold;
 }
