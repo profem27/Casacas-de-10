@@ -4,6 +4,7 @@
 
 .sort-section {
     display: flex;
+    flex-wrap: wrap; /* Permitir que los elementos se ajusten en varias líneas */
     align-items: center;
     gap: 1em; /* Espacio entre los elementos */
     border: 2px solid #ef173e; /* Color del recuadro */
@@ -36,4 +37,38 @@
 
 .sort-section input[type="checkbox"]:checked + label {
     font-weight: bold;
+}
+
+/* Media queries para hacer el diseño responsive */
+@media (max-width: 768px) {
+    .sort-section {
+        justify-content: center; /* Centrar los elementos */
+        gap: 0.5em;
+        padding: 1em;
+    }
+
+    .sort-section label {
+        font-size: 0.85em;
+    }
+
+    .sort-section input[type="checkbox"] + label {
+        font-size: 0.85em;
+    }
+}
+
+@media (max-width: 480px) {
+    .sort-section {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: flex-start;
+        padding: 1em;
+        width: 100%; /* Asegura que ocupe todo el ancho en pantallas pequeñas */
+    }
+
+    .sort-section div {
+        width: 100%; /* Los checkboxes ocuparán todo el ancho */
+    }
+
+    .sort-section input[type="checkbox"] + label {
+        font-size: 0.8em;
+    }
 }
