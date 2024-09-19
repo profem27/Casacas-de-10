@@ -154,27 +154,47 @@
         <section class="sort-section">
             <label>Ordenar por:</label>
             <div>
-                <input type="checkbox" id="az" name="sort-order" value="az" onchange="sortProducts()">
+                <input type="checkbox" id="az" name="sort-order" value="az" onchange="handleCheckboxChange(this, 'sort-order')">
                 <label for="az">A-Z</label>
             </div>
             <div>
-                <input type="checkbox" id="za" name="sort-order" value="za" onchange="sortProducts()">
+                <input type="checkbox" id="za" name="sort-order" value="za" onchange="handleCheckboxChange(this, 'sort-order')">
                 <label for="za">Z-A</label>
             </div>
             <div>
-                <input type="checkbox" id="retro" name="sort-type" value="retro" onchange="sortProducts()">
+                <input type="checkbox" id="retro" name="sort-type" value="retro" onchange="handleCheckboxChange(this, 'sort-type')">
                 <label for="retro">Retro</label>
             </div>
             <div>
-                <input type="checkbox" id="actuales" name="sort-type" value="actuales" onchange="sortProducts()">
+                <input type="checkbox" id="actuales" name="sort-type" value="actuales" onchange="handleCheckboxChange(this, 'sort-type')">
                 <label for="actuales">Actuales</label>
             </div>
-        </div>
-    </section>
-    </section>
+            <!-- Nuevos filtros -->
+            <div>
+                <input type="checkbox" id="afa" name="filter-type" value="afa" onchange="handleCheckboxChange(this, 'filter-type')">
+                <label for="afa">Selección Argentina</label>
+            </div>
+            <div>
+                <input type="checkbox" id="selecciones" name="filter-type" value="selecciones" onchange="handleCheckboxChange(this, 'filter-type')">
+                <label for="selecciones">Selecciones</label>
+            </div>
+            <div>
+                <input type="checkbox" id="clubes" name="filter-type" value="clubes" onchange="handleCheckboxChange(this, 'filter-type')">
+                <label for="clubes">Clubes</label>
+            </div>
+            <div>
+                <input type="checkbox" id="europa" name="filter-type" value="europa" onchange="handleCheckboxChange(this, 'filter-type')">
+                <label for="europa">Fútbol Europeo</label>
+            </div>
+            <div>
+                <input type="checkbox" id="latinoamerica" name="filter-type" value="latinoamerica" onchange="handleCheckboxChange(this, 'filter-type')">
+                <label for="latinoamerica">Fútbol Latinoamericano</label>
+            </div>
+        </section>
+        
     
 <div class="product-grid">
-    <div class="product-card">
+    <div class="product-card" data-categories="seleccion, latinoamericano, afa">
         <a href="../../camisetas/Retro/afa94S.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/afa94s-front.png" alt="Camiseta retro AFA Suplente Messi (10) 1994">
@@ -187,7 +207,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="../../camisetas/Retro/manu0304.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/manu0304-front.png" alt="Camiseta retro Manchester United 03/04">
@@ -199,7 +219,7 @@
             </div>
         </a>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="../../camisetas/Retro/parma9900.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/parma9900-front.png" alt="Camiseta retro Parmalat 99/00">
@@ -212,7 +232,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="seleccion, latinoamericano, retro">
         <a href="../../camisetas/Retro/br98.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/br1998Ronaldo-front.png" alt="Camiseta retro Brasil Ronaldo (9) 1998">
@@ -223,7 +243,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card"  data-categories="seleccion, retro">
         <a href="../../camisetas/Retro/jap98.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/jp1998-front.png" alt="Camiseta retro Japón 1998">
@@ -236,7 +256,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card"  data-categories="club, europeo, retro">
         <a href="../../camisetas/Retro/barca0809.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/barca09-front.png" alt="Camiseta retro Barcelona 08/09">
@@ -247,7 +267,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card"  data-categories="club, europeo, retro">
         <a href="../../camisetas/Retro/fiore9899.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/fiore9899-front.png" alt="Camiseta retro Fiorentina 98/99">
@@ -260,7 +280,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card"  data-categories="seleccion, latinoamericano, afa, actuales">
         <a href="../../camisetas/Actuales/afa2024.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/afa2024-front.png" alt="Camiseta AFA 2024">
@@ -271,7 +291,7 @@
                 <p>$65.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card"  data-categories="club, latinoamericano, retro">
         <a href="../../camisetas/Retro/boca0203.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/boca0203-front.png" alt="Camiseta retro Boca Juniors 02/03">
@@ -284,7 +304,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card"  data-categories="club, latinoamericano, retro">
         <a href="../../camisetas/Retro/river9697.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/river9697-front.png" alt="Camiseta retro River Plate 96/97">
@@ -296,7 +316,7 @@
             </div>
         </a>
     </div>       
-    <div class="product-card">
+    <div class="product-card"  data-categories="afa, latinoamericano, retro, seleccion">
         <a href="../../camisetas/Retro/afa2005.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/afa2005-front.png" alt="Camiseta retro AFA 2005">
@@ -309,7 +329,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card"  data-categories="seleccion, europeo, retro">
         <a href="product2.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/alemania92-front.png" alt="Camiseta retro Alemania 1992">
@@ -321,7 +341,7 @@
             </div>
         </a>
     </div>
-    <div class="product-card">
+    <div class="product-card"  data-categories="club, latinoamericano, retro">
         <a href="product3.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/boca09-front.png" alt="Camiseta retro Boca 2009">
@@ -334,7 +354,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, latinoamericano, retro">
         <a href="product4.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/boca97-front.png" alt="Camiseta retro Boca 1997">
@@ -345,7 +365,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, latinoamericano, retro">
         <a href="product5.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/boca9697-front.png" alt="Camiseta retro Boca 96/97">
@@ -358,7 +378,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product6.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/chelsea90S-front.png" alt="Camiseta retro Chelsea suplente 1990">
@@ -369,7 +389,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, europeo, retro">
         <a href="product7.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/rmadrid0102-front.png" alt="Camiseta retro Real Madrid 01/02">
@@ -382,7 +402,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, latinoamericano, retro">
         <a href="product8.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/flu99-front.png" alt="Camiseta retro Fluminense 1999">
@@ -393,7 +413,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, europeo, retro">
         <a href="product9.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/napoli90-front.png" alt="Camiseta retro Napoli 1990">
@@ -406,7 +426,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/rmadrid0809-front.png" alt="Camiseta retro Real Madrid 08/09">
@@ -418,7 +438,7 @@
             </div>
         </a>
     </div>       
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="../../camisetas/Retro/afa94S.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/barca1314-front.png" alt="Camiseta retro Barcelona 13/14">
@@ -431,7 +451,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product2.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/manu0708-front.png" alt="Camiseta retro Manchester United 07/08">
@@ -443,7 +463,7 @@
             </div>
         </a>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product3.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/rbetis9596-front.png" alt="Camiseta retro Real Betis 95/96">
@@ -456,7 +476,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product4.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/milan0102-front.png" alt="Camiseta retro Milan 01/02">
@@ -467,7 +487,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="seleccion, europeo, retro">
         <a href="product5.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/portugal99-front.png" alt="Camiseta retro Portugal 1999">
@@ -480,7 +500,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product6.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/juve8485-front.png" alt="Camiseta retro Juventus 84/85">
@@ -491,7 +511,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, europeo, retro">
         <a href="product7.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/chelsea1213-front.png" alt="Camiseta retro Chelsea 12/13">
@@ -504,7 +524,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product8.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/juve1516S-front.png" alt="Camiseta retro Juventus 15/16">
@@ -515,7 +535,7 @@
                 <p>$50.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, latinoamericano, retro">
         <a href="product9.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/juve9798-front.png" alt="Camiseta retro Juventus 97/98">
@@ -528,7 +548,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="seleccion, latinoamericano, retro">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/br94-front.png" alt="Camiseta retro Brasil 1994">
@@ -540,7 +560,7 @@
             </div>
         </a>
     </div>       
-    <div class="product-card">
+    <div class="product-card" data-categories="seleccion, europeo, retro">
         <a href="../../camisetas/Retro/afa94S.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/alemania2014-front.png" alt="Camiseta retro Alemania 2014">
@@ -553,7 +573,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, retro">
         <a href="product2.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/rmadrid1718-front.png" alt="Camiseta retro Real Madrid 17/18">
@@ -565,7 +585,7 @@
             </div>
         </a>
     </div>
-    <div class="product-card">
+    <div class="product-card" data-categories="seleccion, europeo, retro">
         <a href="product3.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/fra98-front.png" alt="Camiseta retro Francia 1998">
@@ -578,7 +598,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="seleccion, europeo, actuales">
         <a href="product4.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/italia2425-front.png" alt="Camiseta selección Italia 24/25">
@@ -589,7 +609,7 @@
                 <p>$65.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product5.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/barca2425-front.png" alt="Camiseta Barcelona 24/25">
@@ -602,7 +622,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, actuales">
         <a href="product6.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/imiami2425-front.png" alt="Camiseta Inter de Miami suplente 24/25">
@@ -613,7 +633,7 @@
                 <p>$65.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, latinoamericano, actuales">
         <a href="product7.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/river2425-front.png" alt="Camiseta River Plate 24/25">
@@ -626,7 +646,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product8.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/rmadrid2425-front.png" alt="Camiseta Real Madrid 24/25">
@@ -637,7 +657,7 @@
                 <p>$65.000</p>
             </div>
         </a>
-    </div>  <div class="product-card">
+    </div>  <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product9.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/dortm2425-front.png" alt="Camiseta Borussia Dortmund 24/25">
@@ -650,7 +670,7 @@
         </a>
     </div>
 
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/napoli2425-front.png" alt="Camiseta Napoli 24/25">
@@ -662,7 +682,7 @@
             </div>
         </a>
     </div>       
-    <div class="product-card">
+    <div class="product-card" data-categories="club, latinoamericano, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/boca2425-front.png" alt="Camiseta Boca Juniors 24/25">
@@ -674,7 +694,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="seleccion, latinoamericano, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/uru2425-front.png" alt="Camiseta selección Uruguay 24/25">
@@ -686,7 +706,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/inter2425-front.png" alt="Camiseta Inter de Milan 24/25">
@@ -698,7 +718,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/manc2425S-front.png" alt="Camiseta Manchester City suplente 24/25">
@@ -710,7 +730,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/atlem2425-front.png" alt="Camiseta Atlético Madrid 24/25">
@@ -722,7 +742,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/manu2425-front.png" alt="Camiseta Manchester United 24/25">
@@ -734,7 +754,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/milan2425-front.png" alt="Camiseta Milan 24/25">
@@ -746,7 +766,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/totte2425-front.png" alt="Camiseta Tottenham 24/25">
@@ -758,7 +778,7 @@
             </div>
         </a>
     </div>   
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/newc2425S-front.png" alt="Camiseta New Castle suplente 24/25">
@@ -770,7 +790,7 @@
             </div>
         </a>
     </div>  
-    <div class="product-card">
+    <div class="product-card" data-categories="club, europeo, actuales">
         <a href="product10.html">
             <div class="product-image">
                 <img class="img-front" src="../../content/uploads/ars2425S-front.png" alt="Camiseta Arsenal suplente 24/25">
