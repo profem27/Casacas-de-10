@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
             total += itemTotal;
         });
 
-        cartTotal.innerText = `$${total.toLocaleString()}`;
+        cartTotal.innerText = `${total.toLocaleString()}`;
 
         document.querySelectorAll('.remove-item').forEach(button => {
             button.addEventListener('click', function () {
