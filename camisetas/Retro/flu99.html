@@ -142,14 +142,15 @@
 </header>
 
 <!-- Carrito flotante -->
-<div id="cart-popup" class="cart-popup">
-    <h2>Carrito de Compras</h2>
-    <div id="cart-items"></div>
-    <div class="cart-total">
-        <p>Total: <span id="cart-total">0</span></p>
+    <div id="cart-popup" class="cart-popup">
+        <button id="close-cart" class="close-cart">&times;</button> <!-- Botón de cierre -->
+        <h2>Carrito de Compras</h2>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <p>Total: $<span id="cart-total">0</span></p>
+        </div>
+        <button id="checkout-button" class="finalizar-pedido">Finalizar pedido</button>
     </div>
-    <button id="checkout-button">Finalizar pedido</button>
-</div>
 
 <script src="../../js/main.js"></script>
 <div class="containerCamis">
