@@ -83,6 +83,22 @@
     margin-bottom: 10px;
 }
 
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 50px;
+    cursor: pointer;
+    color: #ef173e; /* Puedes cambiar el color aquí */
+}
+
+.close-cart:hover {
+    color: darkred;
+}
+
+
 /* Estilos responsive */
 @media (max-width: 768px) {
     .nav__container {
@@ -109,6 +125,6 @@
         left: 10px; /* Para que el carrito esté centrado horizontalmente */
         top: 150px; /* Mueve el carrito hacia abajo para evitar el encabezado */
         width: 90%;
-        max-width: 350px;
+        max-width: 250px;
     }
 }

@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let message = 'Hola, quisiera comprar los siguientes productos:\n\n';
 
             cart.forEach(item => {
-                message += `${item.name} - Talle: ${item.size} - Cantidad: ${item.quantity} - Precio: $${(item.price * item.quantity).toLocaleString()}\n`;
+                message += `${item.name} - Talle: ${item.size} - Cantidad: ${item.quantity} - Precio: ${(item.price * item.quantity).toLocaleString()}\n`;
             });
 
             message += `\nTotal a pagar: $${cart.reduce((acc, item) => acc + (item.price * item.quantity), 0).toLocaleString()}`;
@@ -98,4 +98,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     updateCartDisplay();
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const closeCartButton = document.getElementById('close-cart');
+    const cartPopup = document.getElementById('cart-popup');
+
+    // Función para cerrar el carrito
+    closeCartButton.addEventListener('click', function () {
+        cartPopup.style.display = 'none';
+    });
+
+    // Otros códigos ya existentes
 });
