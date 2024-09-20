@@ -212,7 +212,7 @@
   height: 30px; /* Tamaño de la imagen de las flechas */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .carousel-button {
     padding: 0.5rem; /* Reducir tamaño en pantallas pequeñas */
   }
@@ -293,7 +293,7 @@ h5 {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
     margin-left: 0; /* Ajustamos el margen */
-    max-width: 100%; /* Aseguramos que el ancho máximo sea el 100% */
+    max-width: 90%; /* Aseguramos que el ancho máximo sea el 100% */
   }
 
   .item-left {
