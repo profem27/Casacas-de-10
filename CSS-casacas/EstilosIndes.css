@@ -184,38 +184,12 @@
   object-fit: cover;
 }
 
-.carousel-button {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  cursor: pointer;
-  padding: 1rem; /* Aumentar el tamaño del botón */
-  border-radius: 50%;
-  z-index: 10;
-}
-
-.prev {
-  left: 20px; /* Ajustar posición según sea necesario */
-  top: 360px;
-}
-
-.next {
-  right: 20px; /* Ajustar posición según sea necesario */
-  top: 360px;
-}
-
-
 .carousel-button img {
   width: 30px; /* Tamaño de la imagen de las flechas */
   height: 30px; /* Tamaño de la imagen de las flechas */
 }
 
 @media (max-width: 700px) {
-  .carousel-button {
-    padding: 0.5rem; /* Reducir tamaño en pantallas pequeñas */
-  }
   
   .carousel-button img {
     width: 20px; /* Tamaño de la imagen en pantallas pequeñas */

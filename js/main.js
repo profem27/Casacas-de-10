@@ -71,37 +71,25 @@ const removeStyle = () =>{
     }
 }
 
-addEventListener('resize', removeStyle)
-
 document.addEventListener('DOMContentLoaded', function() {
-    const prevButton = document.querySelector('.prev');
-    const nextButton = document.querySelector('.next');
     const carouselImages = document.querySelector('.carousel-images');
-    const images = document.querySelectorAll('.carousel img');
+    const images = document.querySelectorAll('.carousel-images img');
     const totalImages = images.length;
     let index = 0;
-  
+
+    // Función para actualizar la posición del carrusel
     function updateCarousel() {
-      const offset = -index * 100;
-      carouselImages.style.transform = `translateX(${offset}vw)`;
+        const offset = -index * 100; // Mueve el carrusel basado en el índice
+        carouselImages.style.transform = `translateX(${offset}vw)`;
     }
-  
-    prevButton.addEventListener('click', function() {
-      index = (index > 0) ? index - 1 : totalImages - 1;
-      updateCarousel();
-    });
-  
-    nextButton.addEventListener('click', function() {
-      index = (index < totalImages - 1) ? index + 1 : 0;
-      updateCarousel();
-    });
-  });
-  
-  (function(){
- 
-  $("#cart").on("click", function() {
-    $(".shopping-cart").fadeToggle( "fast");
-  });
-  
-})();
+
+    // Función para mover las imágenes automáticamente
+    function autoMove() {
+        index = (index < totalImages - 1) ? index + 1 : 0; // Avanza al siguiente slide o vuelve al primero
+        updateCarousel();
+    }
+
+    // Configura el movimiento automático cada 3 segundos (3000 ms)
+    setInterval(autoMove, 3000);
+});
 
