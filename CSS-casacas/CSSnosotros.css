@@ -1,0 +1,78 @@
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.textonosotros {
+    display: flex;
+    border: 2px solid #ccc;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin-top: 10em; /* Ajusta el margen superior */
+    justify-content: center;
+    align-items: center;
+    margin-left: 10em;
+    /* Añadir margen a los lados en pantallas grandes */
+    margin-right: 10em;
+}
+
+/* Estilos para pantallas grandes */
+.content-box {
+    flex: 1;
+    padding: 20px;
+    border-right: 2px solid #ccc;
+}
+
+.image-box {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Estilos para pantallas pequeñas y móviles */
+@media (max-width: 768px) {
+    .textonosotros {
+        flex-direction: column;
+        margin-left: 1em;
+        margin-right: 1em;
+        padding: 10px;
+    }
+
+    .content-box {
+        border-right: none;
+        border-bottom: 2px solid #ccc;
+        padding: 10px;
+        margin-top: 9em;
+    }
+
+    .image-box {
+        padding: 10px;
+    }
+
+    .image-box img {
+        max-width: 80%; /* Reducir el tamaño de la imagen en pantallas pequeñas */
+        border-radius: 10px;
+    }
+}
+
+/* Estilos para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    .textonosotros {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        margin-top: 2em;
+    }
+
+    .image-box img {
+        max-width: 100%; /* Imagen ocupa todo el ancho */
+    }
+}
