@@ -9,61 +9,39 @@ html, body {
     padding: 20px;
     background-color: #fff;
     max-width: 1200px;
-    margin-top: 10em; /* Ajusta el margen superior */
+    margin-top: 10em;
     justify-content: center;
-    align-items: center;
-    margin-left: 10em;
-    /* Añadir margen a los lados en pantallas grandes */
-    margin-right: 10em;
+    align-items: flex-start; /* Cambiado para alinear los textos arriba */
+    margin-left: auto;
+    margin-right: auto;
     text-align: justify;
 }
 
-/* Estilos para pantallas grandes */
 .content-box {
     flex: 1;
     padding: 20px;
-    border-right: 2px solid #ccc;
+    border-right: 2px solid #ccc; /* Puedes quitar este borde si no lo quieres */
 }
 
-.image-box {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.textonosotros .content-box:last-child {
+    border-right: none; /* No tener borde en el último cuadro */
 }
 
-.image-box img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* Estilos para pantallas pequeñas y móviles */
 @media (max-width: 768px) {
     .textonosotros {
         flex-direction: column;
         margin-left: 1em;
         margin-right: 1em;
-        padding: 10px;
     }
 
     .content-box {
         border-right: none;
-        border-bottom: 2px solid #ccc;
+        border-bottom: 2px solid #ccc; /* Borde inferior en lugar de lateral */
         padding: 10px;
         margin-top: 9em;
     }
-
-    .image-box {
-        padding: 10px;
-    }
-
-    .image-box img {
-        max-width: 80%; /* Reducir el tamaño de la imagen en pantallas pequeñas */
-        border-radius: 10px;
-    }
 }
+
 
 /* Estilos para pantallas muy pequeñas (menos de 480px) */
 @media (max-width: 480px) {
