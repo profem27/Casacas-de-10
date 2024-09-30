@@ -111,10 +111,10 @@
         gap: 15px;
         width: 100%;
     }
-
+    
     .nav__cart {
-        position: absolute; /* Permite mover el elemento de forma precisa */
-        top: 15em; /* Ajusta según sea necesario */
+        position:relative; /* Permite mover el elemento de forma precisa */
+        top: -2em; /* Ajusta según sea necesario */
         left: 0.2em; /* Espacio desde el borde derecho */
         display: flex;
     }
