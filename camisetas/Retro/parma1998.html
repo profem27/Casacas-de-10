@@ -159,17 +159,17 @@
 <div class="containerCamis">
     <!-- Galería de imágenes -->
     <div class="image-gallery">
-        <img id="mainImage" class="main-image" src="../../content/uploads/manu0708-front.png" alt="Camiseta Manchester United 2007/2008-Ronaldo (7)">
+        <img id="mainImage" class="main-image" src="../../content/uploads/parma1998-front.png" alt="Camiseta Parmalat 1998/1999">
         
         <div class="thumbnail">
-            <img src="../../content/uploads/manu0708-front.png" alt="Vista 1" onclick="changeImage('../../content/uploads/manu0708-front.png')">
-            <img src="../../content/uploads/manu0708-back.png" alt="Vista 2" onclick="changeImage('../../content/uploads/manu0708-back.png')">
+            <img src="../../content/uploads/parma1998-front.png" alt="Vista 1" onclick="changeImage('../../content/uploads/parma1998-front.png')">
+            <img src="../../content/uploads/parma1998-front.png" alt="Vista 2" onclick="changeImage('../../content/uploads/parma1998-front.png')">
         </div>
     </div>
 
     <!-- Detalles del producto -->
     <div class="product-details">
-        <h1 id="product-name">Camiseta Manchester United 2007/2008-Ronaldo (7)</h1>
+        <h1 id="product-name">Camiseta Parma 1998/1999</h1>
         <div class="price">$55.000</div>
         <div class="offers">
             ¡10% OFF comprando 2 o más! <br> <br>
@@ -180,7 +180,7 @@
             <select id="size">
                 <option value="S" disabled>S</option>
                 <option value="M" disabled>M</option>
-                <option value="L" disabled>L</option>
+                <option value="L" selected>L</option>
                 <option value="XL" disabled>XL</option>
             </select>
         </div>
@@ -190,7 +190,7 @@
             <input type="number" id="quantity" value="1" min="1">
         </div>
 
-        <button class="add-to-cart" disabled>Sin Stock</button>
+        <button class="add-to-cart"  onclick="addToCart('Producto 1', 10)">Agregar al Carrito</button>
     </div>
 </div>
 
